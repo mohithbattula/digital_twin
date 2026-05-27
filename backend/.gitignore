@@ -1,0 +1,32 @@
+# Python virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# Python cache & compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environment files and secrets
+.env
+.env.*
+!.env.template
+*.pem
+*.key
+*.cert
+
+# Logs and SQLite databases
+*.log
+*.db
+*.sqlite
+*.sqlite3
+
+# Uploads directory - ignore files but preserve the folder structure if needed
+uploads/**/*
+!uploads/task-docs/
+!uploads/task-docs/.gitkeep
