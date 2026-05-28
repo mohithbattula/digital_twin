@@ -1,5 +1,4 @@
-const configuredApiUrl =
-  process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000/v1";
+const configuredApiUrl = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8740/v1";
 
 export function getApiBaseUrl() {
   if (typeof window === "undefined") return configuredApiUrl;

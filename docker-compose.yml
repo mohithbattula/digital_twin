@@ -7,14 +7,14 @@ services:
       dockerfile: Dockerfile
     container_name: twin-backend
     ports:
-      - "8000:8000"
+      - "8740:8740"
     env_file:
       - .env
     volumes:
       - backend-uploads:/app/uploads
     restart: always
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      test: ["CMD", "curl", "-f", "http://localhost:8740/health"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -29,7 +29,7 @@ services:
         - NEXT_PUBLIC_SUPABASE_ANON_KEY=${NEXT_PUBLIC_SUPABASE_ANON_KEY}
     container_name: twin-frontend
     ports:
-      - "3000:3000"
+      - "8730:8730"
     depends_on:
       backend:
         condition: service_healthy
